@@ -87,7 +87,7 @@ function Sidebar({ isOpen, onClose }) {
         <span className="gptLogoImg" onClick={createNewChat}>
           <img
             className="gptLogo"
-            src="src/assets/chatgptlogo.png"
+            src="https://cdn.imgbin.com/19/20/25/chatgpt-logo-Yh9M6DVq.jpg"
             alt="LOGO"
           />
         </span>
