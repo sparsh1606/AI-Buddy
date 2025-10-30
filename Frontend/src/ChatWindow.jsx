@@ -22,7 +22,7 @@ function ChatWindow({ onSidebarToggle }) {
     setLoading(true);
     setNewChat(false);
     try {
-      const response = await axios.post("http://localhost:8080/api/create", {
+      const response = await axios.post("https://ai-buddy-1-nodc.onrender.com/api/create", {
         threadId: currThreadId,
         message: prompt,
       });

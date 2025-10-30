@@ -28,7 +28,7 @@ function Sidebar({ isOpen, onClose }) {
   const deleteThread = async (threadId) => {
     try {
       const response = await axios.delete(
-        `http://localhost:8080/api/thread/${threadId}`
+        `https://ai-buddy-1-nodc.onrender.com/api/thread/${threadId}`
       );
       console.log(response.data);
 
@@ -47,7 +47,7 @@ function Sidebar({ isOpen, onClose }) {
     setCurrThreadId(threadId);
     try {
       const response = await axios.get(
-        `http://localhost:8080/api/thread/${threadId}`
+        `https://ai-buddy-1-nodc.onrender.com/api/thread/${threadId}`
       );
       setPrevChats(response.data);
       setNewChat(false);
@@ -59,7 +59,7 @@ function Sidebar({ isOpen, onClose }) {
 
   const getAllThreads = async () => {
     try {
-      const fetchThreads = await axios.get("http://localhost:8080/api/thread");
+      const fetchThreads = await axios.get("https://ai-buddy-1-nodc.onrender.com/api/thread");
       const filterData = fetchThreads.data.map((thread) => ({
         threadId: thread.threadId,
         title: thread.title,
